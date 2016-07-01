@@ -1,4 +1,3 @@
-from __future__ import print_statement, absolute_imports, division
 from __future__ import print_function, absolute_import, division
 import requests
 
@@ -16,5 +15,5 @@ class Client(object):
 				name=summoner, region=region), params=params).json()
 		return res.get(summoner) or res.get('status')
 
-	def is_ingame(self, region, summoner):
-		return False
+	def get_current_game(self, region, summoner):
+		return

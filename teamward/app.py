@@ -23,8 +23,8 @@ def index(region, summoner):
 			'error_code': 404, 
 			'reason': 'Summoner not found'})
 
-	in_game = g.api.is_ingame(region, summoner_info['id'])
-	if not in_game:
+	game = g.api.get_current_game(region, summoner_info['id'])
+	if not game:
 		return jsonify({
 			'status': 'error', 
 			'error_code': 405, 
