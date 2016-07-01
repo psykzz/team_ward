@@ -1,9 +1,11 @@
+from __future__ import print_statement, absolute_imports, division
+
 import os
 
 from flask import Flask, jsonify, g
 app = Flask(__name__)
 
-from RiotAPI import Client
+from teamward.RiotAPI import Client
 
 
 @app.before_request

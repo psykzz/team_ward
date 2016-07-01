@@ -1,3 +1,4 @@
+from __future__ import print_statement, absolute_imports, division
 import os
 
 from flask import Flask
